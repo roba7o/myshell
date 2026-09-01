@@ -1,4 +1,4 @@
-# Milestone 5 — Pipes
+# Milestone 6 — Pipes
 
 **Goal:** `ls | wc -l` works. Then `ls | grep .c | wc -l`.
 
@@ -14,7 +14,7 @@ The final milestone, and the one where everybody deadlocks at least once.
   Short, and directly on target. Read the whole pipes section.
 - `man 2 pipe` — note it fills in an array of **two** fds and which end is
   which.
-- Re-skim your `dup2` notes from milestone 4. This is that, twice.
+- Re-skim your `dup2` notes from milestone 5. This is that, twice.
 
 ---
 
@@ -45,7 +45,7 @@ Mnemonic: 0 is stdin-ish (read), 1 is stdout-ish (write). Write bytes into
 
 Two children. The left one's stdout is the pipe's write end; the right one's
 stdin is the pipe's read end. Both are `dup2` — exactly what you did in
-milestone 4, just pointing at a pipe instead of a file.
+milestone 5, just pointing at a pipe instead of a file.
 
 The parent creates the pipe *before* forking, so both children inherit it.
 
@@ -96,7 +96,7 @@ pipe" from one iteration to the next.
 Design decision worth thinking about: do you create all the pipes up front, or
 one per iteration and close as you go? One is much easier to get right.
 
-### Part C — combine with milestone 4
+### Part C — combine with milestone 5
 
 `ls | grep .c > out.txt` should work. Redirection applies to individual
 commands within the pipeline; the pipe applies between them. If your data
@@ -149,7 +149,7 @@ Cross-check every result against `zsh`. Same input, same output.
 - No hangs.
 - No zombies.
 - `make asan` clean.
-- `git commit -m "milestone 5: pipes"`.
+- `git commit -m "milestone 6: pipes"`.
 
 ---
 

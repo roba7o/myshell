@@ -1,4 +1,4 @@
-# Milestone 3 — Builtins
+# Milestone 4 — Builtins
 
 **Goal:** `cd`, `exit`, and `pwd` work. And you understand why they *have* to
 be built in.

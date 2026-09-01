@@ -1,4 +1,4 @@
-# Milestone 1 — The REPL
+# Milestone 2 — The REPL
 
 **Goal:** a prompt that reads a line, echoes it back, and loops until you type
 `exit` or press Ctrl-D.
@@ -28,7 +28,7 @@ A shell is a **R**ead–**E**val–**P**rint **L**oop. Forever:
 print a prompt
 read a line
 if it's empty or EOF, handle it
-evaluate it        <- this is milestones 2-5
+evaluate it        <- this is milestones 3-6
 loop
 ```
 
@@ -63,7 +63,7 @@ saw exactly this in the `abc` retry loop.
 5. **Strip the trailing newline.** Both readers keep it. You'll be comparing
    this string against `"exit"` shortly, and `"exit\n" != "exit"`.
 6. **Add `exit`.** A literal string compare for now — proper builtins are
-   milestone 3.
+   milestone 4.
 
 ---
 

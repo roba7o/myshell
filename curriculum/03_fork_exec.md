@@ -1,4 +1,4 @@
-# Milestone 2 — fork and exec
+# Milestone 3 — fork and exec
 
 **Goal:** `ls -l`, `echo hello`, `/bin/date` all actually run.
 
@@ -58,7 +58,7 @@ it *failed*. That's not a quirk to work around; it's how you detect failure.
 
 Because between `fork` and `exec`, the child is *your code running in a fresh
 process*. That gap is where you set things up — change directory, redirect
-file descriptors, reassign stdin. Milestones 4 and 5 live entirely inside that
+file descriptors, reassign stdin. Milestones 5 and 6 live entirely inside that
 gap. A combined "spawn" call would give you nowhere to stand.
 
 ### argv must be NULL-terminated
@@ -145,7 +145,7 @@ myshell> exit
 - Your shell survives a failed command and keeps prompting.
 - `ps` shows no zombies after running several commands.
 - `make asan` is clean.
-- `git commit -m "milestone 2: fork and exec"`.
+- `git commit -m "milestone 3: fork and exec"`.
 
 ---
 

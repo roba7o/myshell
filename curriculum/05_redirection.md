@@ -1,4 +1,4 @@
-# Milestone 4 — Redirection
+# Milestone 5 — Redirection
 
 **Goal:** `ls > out.txt`, `wc -l < out.txt`, `echo hi >> out.txt` all work.
 
@@ -60,7 +60,7 @@ open, it's closed first. Now anything written to fd 1 goes to your file.
 - Not after `exec` — there is no "after exec". Your code is gone.
 
 That gap is the only place it can go. This is the answer to question 5 of
-milestone 2.
+milestone 3.
 
 ### Why it survives exec
 
@@ -149,7 +149,7 @@ The last two matter: a failed redirect must not kill your shell.
 Then check for fd leaks — run 50 redirects in a loop and confirm your shell
 still works.
 
-`git commit -m "milestone 4: redirection"`.
+`git commit -m "milestone 5: redirection"`.
 
 ---
 
