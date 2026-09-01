@@ -1,0 +1,6 @@
+myshell
+myshell_asan
+*.o
+*.dSYM/
+*.out
+tests/tmp/
