@@ -1,0 +1,9 @@
+# Build artifacts — if make can regenerate it, git shouldn't track it.
+myshell
+myshell_asan
+*.o
+
+# macOS debug symbol bundles (directories)
+*.dSYM/
+
+.DS_Store
