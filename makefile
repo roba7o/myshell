@@ -12,4 +12,6 @@ main.o: src/main.c src/greet/greet.h
 greet.o: src/greet/greet.c src/greet/greet.h
 	$(CC) $(CFLAGS)  -c src/greet/greet.c
 
-
+.PHONY : clean
+clean :
+	rm hellomake $(objects)
