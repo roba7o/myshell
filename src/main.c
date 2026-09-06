@@ -1,10 +1,9 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "greet/greet.h"
 
-int main()
+int main(void)
 {
 
-    printf("Hello world");
+    say_hello();
 
-    return 1;
+    return 0;
 }
