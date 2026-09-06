@@ -7,3 +7,6 @@ myshell_asan
 *.dSYM/
 
 .DS_Store
+
+# scratch experiments, not part of the shell
+learning/
