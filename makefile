@@ -12,4 +12,4 @@ asan: $(FILE)
 
 .PHONY : clean asan
 clean :
-	rm -f myshell myshell_asan
+	rm -rf myshell myshell_asan *.dSYM
