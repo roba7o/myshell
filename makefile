@@ -1,15 +1,15 @@
-objects = main.o
+FILE = src/main.c
 CC     = cc
-CFLAGS = -std=c11 -Wall -Wextra -Wstrict-prototypes -g -fsanitize=address
+CFLAGS = -std=c11 -Wall -Wextra -Wstrict-prototypes -g
+ASAN_FLAG = -fsanitize=address
 
 
-myshell: $(objects)
-	$(CC) $(CFLAGS) -o myshell $(objects)
+myshell: $(FILE)
+	$(CC) $(CFLAGS) -o myshell $(FILE)
 
-main.o: src/main.c
-	$(CC) $(CFLAGS)  -c src/main.c
+asan: $(FILE)
+	$(CC) $(CFLAGS) $(ASAN_FLAG) -o myshell_asan $(FILE)
 
-
-.PHONY : clean
+.PHONY : clean asan
 clean :
-	rm myshell $(objects)
+	rm -f myshell myshell_asan

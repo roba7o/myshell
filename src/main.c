@@ -13,7 +13,7 @@ int main(void)
 void say_hello(void)
 {
     char name[100];
-    printf("Enter your name");
+    printf("Enter your name\n");
     scanf("%s", name);
 
     printf("hello %s\n", name);
