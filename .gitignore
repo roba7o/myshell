@@ -1,6 +1,7 @@
 # Build artifacts — if make can regenerate it, git shouldn't track it.
 myshell
 myshell_asan
+hellomake
 *.o
 
 # macOS debug symbol bundles (directories)
@@ -10,3 +11,7 @@ myshell_asan
 
 # scratch experiments, not part of the shell
 learning/
+
+# personal notes, not part of the project
+curriculum/
+CURRICULUM.md

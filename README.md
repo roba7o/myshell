@@ -1,25 +1,16 @@
 # myshell
 
-A POSIX shell, written in C from scratch, to learn how operating systems
-actually work.
+A Unix shell written in C, from scratch.
 
-This is a **learning project**. The goal isn't a better shell — it's to make
-process creation, file descriptors, and IPC concrete by building them instead
-of reading about them.
+Runs commands, with builtins, redirection and pipes. I built it to understand
+how processes and file descriptors actually work, rather than reading about it.
 
-## Start here
+## Build
 
-[CURRICULUM.md](CURRICULUM.md)
+```sh
+make
+```
 
 ## Status
 
-Nothing built yet. The `Makefile`, `.gitignore`, and everything in `src/` get
-written as you work through the milestones — none of it is provided.
-
-## Layout
-
-```
-curriculum/     the course, one file per milestone
-src/            your code
-Makefile        you write this in milestone 1
-```
+Work in progress.
