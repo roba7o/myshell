@@ -1,16 +1,14 @@
-objects = main.o greet.o
+objects = main.o
 CC     = cc
-CFLAGS = -std=c11 -Wall -Wextra -Wstrict-prototypes -g
+CFLAGS = -std=c11 -Wall -Wextra -Wstrict-prototypes -g -fsanitize=address
 
 
 hellomake: $(objects)
 	$(CC) $(CFLAGS) -o hellomake $(objects)
 
-main.o: src/main.c src/greet/greet.h
+main.o: src/main.c
 	$(CC) $(CFLAGS)  -c src/main.c
 
-greet.o: src/greet/greet.c src/greet/greet.h
-	$(CC) $(CFLAGS)  -c src/greet/greet.c
 
 .PHONY : clean
 clean :
