@@ -1,17 +1,15 @@
-objects = main.o greet.o
+FILE = src/main.c
 CC     = cc
 CFLAGS = -std=c11 -Wall -Wextra -Wstrict-prototypes -g
+ASAN_FLAG = -fsanitize=address
 
 
-hellomake: $(objects)
-	$(CC) $(CFLAGS) -o hellomake $(objects)
+myshell: $(FILE)
+	$(CC) $(CFLAGS) -o myshell $(FILE)
 
-main.o: src/main.c src/greet/greet.h
-	$(CC) $(CFLAGS)  -c src/main.c
+asan: $(FILE)
+	$(CC) $(CFLAGS) $(ASAN_FLAG) -o myshell_asan $(FILE)
 
-greet.o: src/greet/greet.c src/greet/greet.h
-	$(CC) $(CFLAGS)  -c src/greet/greet.c
-
-.PHONY : clean
+.PHONY : clean asan
 clean :
-	rm hellomake $(objects)
+	rm -rf myshell myshell_asan *.dSYM
